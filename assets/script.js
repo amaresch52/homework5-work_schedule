@@ -1,5 +1,13 @@
 $('#currentDay').text(dayjs().format('MMMM DD YYYY'));
 
+$('.saveBtn').on("click",function() {
+    var timeSlot = $(this).siblings(".description").val();
+    var inputText = $(this).parent("#id");
+
+    console.log(this);
+localStorage.setItem(timeSlot,inputText);
+});
+
 
 $("#hour-9 .description").val(localStorage.getItem("hour9"));
 $("#hour-10 .description").val(localStorage.getItem("hour-10"));
@@ -11,3 +19,10 @@ $("#hour-3 .description").val(localStorage.getItem("hour-3"));
 $("#hour-4 .description").val(localStorage.getItem("hour-4"));
 $("#hour-5 .description").val(localStorage.getItem("hour-5"));
 
+var date = new Date();
+var currentHour = date.getHours();
+console.log(currentHour);
+
+$('.time-block').each(function() {
+
+})
