@@ -1,9 +1,10 @@
 $('#currentDay').text(dayjs().format('MMMM DD YYYY'));
 
+//Clear localStorage
 $('#delete').on("click", function() {
     localStorage.clear();
     location.reload();
-    return false;
+    //return false;
 });
 
 //Save input onclick to localStorage
